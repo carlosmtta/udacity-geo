@@ -17,6 +17,9 @@ class InfoWindow extends Component {
           className='close-window'>X</p>
         <p className='info-category'>{place.categories[0].name}</p>
         <p className='info-address'>{place.location.address}, {place.location.city}</p>
+        <p className='attribution'>
+          Dados fornecidos por <a target='_blank' href='https://foursquare.com'>Foursquare</a>
+        </p>
       </article>
     </Draggable>
     )

@@ -59,8 +59,10 @@ class App extends Component {
    */
   handleHidingInfoWindow = () => {
     const places = this.state.places.map((p, index) => {
-      p.clicked = false;
-      return p;
+      return {
+        ...p,
+        clicked: false
+      };
     });
 
     // Atualiza o estado do componente

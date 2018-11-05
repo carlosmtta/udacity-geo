@@ -26,9 +26,11 @@ class List extends Component {
           const venues = fsResponse.response.venues;
           this.props.setMarkers(venues);
           this.setState({ places: venues });
-        });
+        }).catch(err => {
+          window.alert("Erro ao consultar lugares.")
+        })
       }
-    );
+    )
   }
   /**
    * Manipulador de pesquisas
@@ -72,6 +74,9 @@ class List extends Component {
     const { query } = this.state;
 
     return <input
+      arial-label="Filtrar lugares"
+      role='input de texto'
+      long
       tabIndex={1}
       className='filter-places'
       type='text'

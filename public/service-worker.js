@@ -1,4 +1,4 @@
-var CACHE_NAME = 'neighborhood-map-cache';
+var CACHE_NAME = 'udacity-geo';
 
 /**
  * Activation
