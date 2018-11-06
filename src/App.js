@@ -112,7 +112,7 @@ class App extends Component {
           hideInfoWindow={this.handleHidingInfoWindow} />)}
         <div
           style={{ opacity: 0 }}
-          className='error'>Something went wrong</div>
+          className='error'>Mapa não pode ser carregado.</div>
       </div>
     );
   }

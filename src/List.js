@@ -27,7 +27,9 @@ class List extends Component {
           this.props.setMarkers(venues);
           this.setState({ places: venues });
         }).catch(err => {
-          window.alert("Erro ao consultar lugares.")
+          setTimeout(function(){
+            window.alert("Não foi possível carregar lugares a partir do Foursquare.")
+          },6000)
         })
       }
     )
