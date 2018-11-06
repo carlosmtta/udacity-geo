@@ -8,8 +8,6 @@ function onMapLoaded() {
   window.isMapLoaded = true;
 }
 
-
-
 /**
  * Component do Mapa
  */
@@ -48,7 +46,7 @@ class Map extends Component {
       if (!window.isMapLoaded) {
         alert("Mapa não pode ser carregado do Google Maps.");
       }
-    }, 5000);
+    }, 10000);
   }
 
   render() {
@@ -59,7 +57,7 @@ class Map extends Component {
       style={{marginLeft: '250px'}}>
       <MapComponent
         isMarkerShown={this.props.places.length > 0}
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyBJfHvwPwfcnE84Np5u3YXEaDhp-ADsJNE&v=3.exp&libraries=geometry,drawing,places&callback=${onMapLoaded}`}
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyBJfHvwPwfcnE84Np5u3YXEaDhp-ADsJNE&v=3.exp&libraries=geometry,drawing,places&callback=onMapLoaded`}
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
